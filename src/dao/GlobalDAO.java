@@ -25,4 +25,13 @@ public class GlobalDAO {
     public static void updateMoney(int money) {
         Cache.put(Constants.KEY_MONEY, money);
     }
+
+    public static boolean getFoodBowlEmpty() {
+        Boolean empty = Cache.get(Constants.KEY_FOOD_BOWL_EMPTY);
+        return empty == null ? true : empty;
+    }
+
+    public static void updateFoodBowlEmpty(boolean empty) {
+        Cache.put(Constants.KEY_FOOD_BOWL_EMPTY, empty);
+    }
 }

@@ -18,15 +18,14 @@ public class Constants {
     public static final int SICK_HEALTH = 70;
     public static final int DIEING_HEALTH = 20;
     public static final int SICK_CHANCE_WHILE_WET = 40;
-    public static final int FOOD_BAG_CAPACITY = 100;
-
     public static final int ENTERTAIN_ENERGY_EFFECT = 1;
     public static final int PLAY_ENERGY_EFFECT = 2;
+    public static final int FOOD_FEED_TIMES_PER_BAG = 10;
 
     public final static String KEY_PET = "pet";
     public final static String KEY_MONEY = "money";
-    public final static String KEY_FOOD_IN_BOWL = "food_in_bowl";
-    public final static String KEY_WATER_IN_BOWL = "water_in_bowl";
+    public final static String KEY_FOOD_BOWL_EMPTY = "food_bowl_empty";
+    public final static String KEY_WATER_BOWL_EMPTY = "water_bowl_empty";
 
     public final static String KEY_FOOD_TEMPLATES = "food_templates";
     public final static String KEY_BOWL_TEMPLATES = "bowl_templates";

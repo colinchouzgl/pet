@@ -10,5 +10,5 @@ import lombok.Data;
 public class FoodDto {
     private String name;
     private int amount;
-    private int restRatio;
+    private int restTimes;
 }
