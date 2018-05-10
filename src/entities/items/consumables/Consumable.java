@@ -10,5 +10,5 @@ import lombok.Data;
 @Data
 public class Consumable extends Item {
     private int amount;
-    private int useTimes;
+    private int rest;
 }
