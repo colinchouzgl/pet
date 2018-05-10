@@ -21,8 +21,5 @@
     "sickChance" : 20,
     "sickEffect" : 1
   } ],
-  "id_bowl" : 0,
-  "id_cleaner" : 0,
-  "id_feeder" : 0,
-  "id_food" : 3
+  "money" : 100
 }

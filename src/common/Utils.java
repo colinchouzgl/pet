@@ -2,8 +2,8 @@ package common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import entities.Entity;
-import entities.items.Bowl;
-import entities.items.Food;
+import entities.Pet;
+import entities.items.*;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.util.JSONUtils;
@@ -25,11 +25,30 @@ public class Utils {
     }
 
     public static void initAll(JSONObject json) {
-        initField(json, Constants.TABLE_ID_FOOD, Integer.class);
-        initField(json, Constants.TABLE_ID_BOWL, Integer.class);
-        initField(json, Constants.TABLE_ID_AUTO_FEEDER, Integer.class);
-        initField(json, Constants.TABLE_ID_WATER_CLEANER, Integer.class);
+        initField(json, Constants.KEY_PET, Pet.class);
+        initField(json, Constants.KEY_MONEY, Integer.class);
+
         initListField(json, Constants.KEY_FOODS, Food.class);
+        initListField(json, Constants.KEY_BOWLS, Bowl.class);
+        initListField(json, Constants.KEY_AUTO_FEEDERS, AutoFeeder.class);
+        initListField(json, Constants.KEY_WATER_CLEANERS, WaterCleaner.class);
+        initListField(json, Constants.KEY_SHAMPOOS, Shampoo.class);
+        initListField(json, Constants.KEY_BATH_BAGS, BathBag.class);
+        initListField(json, Constants.KEY_DRYERS, Dryer.class);
+        initListField(json, Constants.KEY_HOUSES, House.class);
+        initListField(json, Constants.KEY_TOYS, Toy.class);
+        initListField(json, Constants.KEY_DRUGS, Drug.class);
+
+        initListField(json, Constants.KEY_OWNED_FOODS, Food.class);
+        initListField(json, Constants.KEY_OWNED_BOWLS, Bowl.class);
+        initListField(json, Constants.KEY_OWNED_AUTO_FEEDERS, AutoFeeder.class);
+        initListField(json, Constants.KEY_OWNED_WATER_CLEANERS, WaterCleaner.class);
+        initListField(json, Constants.KEY_OWNED_SHAMPOOS, Shampoo.class);
+        initListField(json, Constants.KEY_OWNED_BATH_BAGS, BathBag.class);
+        initListField(json, Constants.KEY_OWNED_DRYERS, Dryer.class);
+        initListField(json, Constants.KEY_OWNED_HOUSES, House.class);
+        initListField(json, Constants.KEY_OWNED_TOYS, Toy.class);
+        initListField(json, Constants.KEY_OWNED_DRUGS, Drug.class);
     }
 
     public static <T> void initField(JSONObject json, String key, Class<T> clazz) {
@@ -44,28 +63,6 @@ public class Utils {
             array.forEach(e -> list.add(fromJson(e.toString(), clazz)));
             Cache.put(key, list);
         }
-    }
-
-    public static <T extends Entity> List<T> initId(List<T> entities) {
-        if (entities != null) {
-            entities.forEach(e -> e.setId(generateId(getTableKey(e.getClass()))));
-        }
-        return entities;
-    }
-
-    public static Integer generateId(Class clazz) {
-        return generateId(getTableKey(clazz));
-    }
-
-    public static Integer generateId(String tableKey) {
-        Integer id = Cache.get(tableKey);
-        id = id == null ? 0 : id;
-        Cache.put(tableKey, ++id);
-        return id;
-    }
-
-    public static String getTableKey(Class clazz) {
-        return "id_" + clazz.getSimpleName().toLowerCase();
     }
 
     public static String toJson(Object o) {

@@ -13,7 +13,8 @@ import java.util.*;
  */
 public class Test {
     public static void main(String[] args) throws Exception {
-        manualInit();
+//        manualInit();
+        init();
         display();
     }
 
@@ -32,7 +33,6 @@ public class Test {
         foods.add(new Food(1, "MAOLIANG1", 299, 3, 20, 1));
         foods.add(new Food(1, "MAOLIANG1", 299, 3, 20, 1));
         jsonObject.put(Constants.KEY_FOODS, foods);
-        jsonObject.put(Constants.TABLE_ID_FOOD, 3);
         return jsonObject;
     }
 

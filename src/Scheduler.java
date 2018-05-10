@@ -1,3 +1,5 @@
+import dao.GlobalDAO;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -12,7 +14,7 @@ public class Scheduler {
         pool.submit(()->{
             while(true){
                 Thread.sleep(2000);
-                Game.pet.globalPiece();
+                GlobalDAO.getPet().globalPiece();
                 System.out.println(Game.pet.toString());
             }
         });
