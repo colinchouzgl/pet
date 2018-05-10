@@ -2,8 +2,6 @@ package entities.items;
 
 import common.Constants;
 import enums.DirtyLevel;
-import enums.FeederType;
-import lombok.Data;
 
 import static common.Utils.safeAdd;
 
@@ -11,19 +9,17 @@ import static common.Utils.safeAdd;
  * @author Zhou Guanliang
  * @since 2018/5/10
  */
-@Data
 public class Bowl extends Item {
     private int dirty;
-    private FeederType type;
+
 
     public Bowl() {
     }
 
-    public Bowl(String name, int price, FeederType type) {
-        super.setName(name);
-        super.setPrice(price);
+    public Bowl(int id, int templateId) {
+        super.setId(id);
+        super.setTemplateId(templateId);
         this.dirty = Constants.MIN_VALUE;
-        this.type = type;
     }
 
     public void piece() {

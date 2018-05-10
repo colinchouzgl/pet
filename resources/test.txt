@@ -1,23 +1,23 @@
 {
-  "foods" : [ {
+  "foodTemplates" : [ {
     "id" : 1,
-    "name" : "MAOLIANG1",
+    "name" : "Liang1",
     "price" : 299,
     "hungerEffect" : 3,
     "sickChance" : 20,
     "sickEffect" : 1
   }, {
-    "id" : 1,
-    "name" : "MAOLIANG1",
-    "price" : 299,
-    "hungerEffect" : 3,
+    "id" : 2,
+    "name" : "Liang2",
+    "price" : 399,
+    "hungerEffect" : 4,
     "sickChance" : 20,
     "sickEffect" : 1
   }, {
-    "id" : 1,
-    "name" : "MAOLIANG1",
-    "price" : 299,
-    "hungerEffect" : 3,
+    "id" : 3,
+    "name" : "Liang3",
+    "price" : 255,
+    "hungerEffect" : 2,
     "sickChance" : 20,
     "sickEffect" : 1
   } ],

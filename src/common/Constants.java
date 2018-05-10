@@ -26,16 +26,16 @@ public class Constants {
     public final static String KEY_PET = "pet";
     public final static String KEY_MONEY = "money";
 
-    public final static String KEY_OWNED_FOODS = "owned_foods";
-    public final static String KEY_OWNED_BOWLS = "owned_bowls";
-    public final static String KEY_OWNED_AUTO_FEEDERS = "owned_feeders";
-    public final static String KEY_OWNED_WATER_CLEANERS = "owned_cleaners";
-    public final static String KEY_OWNED_SHAMPOOS = "owned_shampoos";
-    public final static String KEY_OWNED_BATH_BAGS = "owned_bags";
-    public final static String KEY_OWNED_DRYERS = "owned_dryers";
-    public final static String KEY_OWNED_HOUSES = "owned_houses";
-    public final static String KEY_OWNED_TOYS = "owned_toys";
-    public final static String KEY_OWNED_DRUGS = "owned_drugs";
+    public final static String KEY_FOOD_TEMPLATES = "food_templates";
+    public final static String KEY_BOWL_TEMPLATES = "bowl_templates";
+    public final static String KEY_AUTO_FEEDER_TEMPLATES = "feeder_templates";
+    public final static String KEY_WATER_CLEANER_TEMPLATES = "cleaner_templates";
+    public final static String KEY_SHAMPOO_TEMPLATES = "shampoo_templates";
+    public final static String KEY_BATH_BAG_TEMPLATES = "bag_templates";
+    public final static String KEY_DRYER_TEMPLATES = "dryer_templates";
+    public final static String KEY_HOUSE_TEMPLATES = "house_templates";
+    public final static String KEY_TOY_TEMPLATES = "toy_templates";
+    public final static String KEY_DRUG_TEMPLATES = "drug_templates";
 
     public final static String KEY_FOODS = "foods";
     public final static String KEY_BOWLS = "bowls";

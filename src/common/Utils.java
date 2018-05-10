@@ -1,9 +1,12 @@
 package common;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import entities.Entity;
 import entities.Pet;
 import entities.items.*;
+import entities.items.consumables.Drug;
+import entities.items.consumables.Food;
+import entities.items.consumables.Shampoo;
+import entities.templates.*;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import net.sf.json.util.JSONUtils;
@@ -39,16 +42,16 @@ public class Utils {
         initListField(json, Constants.KEY_TOYS, Toy.class);
         initListField(json, Constants.KEY_DRUGS, Drug.class);
 
-        initListField(json, Constants.KEY_OWNED_FOODS, Food.class);
-        initListField(json, Constants.KEY_OWNED_BOWLS, Bowl.class);
-        initListField(json, Constants.KEY_OWNED_AUTO_FEEDERS, AutoFeeder.class);
-        initListField(json, Constants.KEY_OWNED_WATER_CLEANERS, WaterCleaner.class);
-        initListField(json, Constants.KEY_OWNED_SHAMPOOS, Shampoo.class);
-        initListField(json, Constants.KEY_OWNED_BATH_BAGS, BathBag.class);
-        initListField(json, Constants.KEY_OWNED_DRYERS, Dryer.class);
-        initListField(json, Constants.KEY_OWNED_HOUSES, House.class);
-        initListField(json, Constants.KEY_OWNED_TOYS, Toy.class);
-        initListField(json, Constants.KEY_OWNED_DRUGS, Drug.class);
+        initListField(json, Constants.KEY_FOOD_TEMPLATES, FoodTemplate.class);
+        initListField(json, Constants.KEY_BOWL_TEMPLATES, BowlTemplate.class);
+        initListField(json, Constants.KEY_AUTO_FEEDER_TEMPLATES, AutoFeederTemplate.class);
+        initListField(json, Constants.KEY_WATER_CLEANER_TEMPLATES, WaterCleanerTemplate.class);
+        initListField(json, Constants.KEY_SHAMPOO_TEMPLATES, ShampooTemplate.class);
+        initListField(json, Constants.KEY_BATH_BAG_TEMPLATES, BathBagTemplate.class);
+        initListField(json, Constants.KEY_DRYER_TEMPLATES, DryerTemplate.class);
+        initListField(json, Constants.KEY_HOUSE_TEMPLATES, HouseTemplate.class);
+        initListField(json, Constants.KEY_TOY_TEMPLATES, ToyTemplate.class);
+        initListField(json, Constants.KEY_DRUG_TEMPLATES, DrugTemplate.class);
     }
 
     public static <T> void initField(JSONObject json, String key, Class<T> clazz) {

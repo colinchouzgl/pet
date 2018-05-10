@@ -1,4 +1,4 @@
-package entities.items;
+package entities.items.consumables;
 
 import lombok.Data;
 
@@ -7,5 +7,5 @@ import lombok.Data;
  * @since 2018/5/10
  */
 @Data
-public class Toy extends Item {
+public class Shampoo extends Consumable {
 }

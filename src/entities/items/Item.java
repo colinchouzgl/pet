@@ -9,6 +9,5 @@ import lombok.Data;
  */
 @Data
 public class Item extends Entity {
-    private String name;
-    private int price;
+    private int templateId;
 }
