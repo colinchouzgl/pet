@@ -8,15 +8,20 @@ import java.util.concurrent.Executors;
  * @since 2018/5/10
  */
 public class Scheduler {
-    private static ExecutorService pool= Executors.newFixedThreadPool(10);
+    private static ExecutorService pool = Executors.newFixedThreadPool(10);
 
-    public static void start(){
-        pool.submit(()->{
-            while(true){
+    public static void start() {
+        pool.submit(() -> {
+            while (true) {
                 Thread.sleep(2000);
-                GlobalDAO.getPet().globalPiece();
-                System.out.println(Game.pet.toString());
+                pieceDo();
             }
         });
+    }
+
+    public static void pieceDo() {
+        GlobalDAO.getPet().globalPiece();
+
+        System.out.println(Game.pet.toString());
     }
 }
