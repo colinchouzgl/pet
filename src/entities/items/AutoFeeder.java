@@ -15,10 +15,10 @@ public class AutoFeeder extends Item {
     private int durability;
     private FeederType type;
 
-    AutoFeeder() {
+    public AutoFeeder() {
     }
 
-    AutoFeeder(String name, int price, FeederType type) {
+    public AutoFeeder(String name, int price, FeederType type) {
         super.setName(name);
         super.setPrice(price);
         this.durability = Constants.MAX_VALUE;

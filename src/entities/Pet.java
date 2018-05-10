@@ -42,7 +42,7 @@ public class Pet {
     /**
      * 全局碎片动作
      */
-    public void GlobalPiece() {
+    public void globalPiece() {
         if (isDead()) {
             return;
         }

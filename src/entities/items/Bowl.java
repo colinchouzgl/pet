@@ -16,10 +16,10 @@ public class Bowl extends Item {
     private int dirty;
     private FeederType type;
 
-    Bowl() {
+    public Bowl() {
     }
 
-    Bowl(String name, int price, FeederType type) {
+    public Bowl(String name, int price, FeederType type) {
         super.setName(name);
         super.setPrice(price);
         this.dirty = Constants.MIN_VALUE;

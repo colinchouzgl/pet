@@ -11,10 +11,10 @@ public class Dryer extends Item {
     private int wetnessEffect;
     private int moodEffect;
 
-    Dryer() {
+    public Dryer() {
     }
 
-    Dryer(String name, int price, int wetnessEffect, int moodEffect) {
+    public Dryer(String name, int price, int wetnessEffect, int moodEffect) {
         super.setName(name);
         super.setPrice(price);
         this.wetnessEffect = wetnessEffect;

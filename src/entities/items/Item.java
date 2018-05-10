@@ -1,5 +1,6 @@
 package entities.items;
 
+import entities.Entity;
 import lombok.Data;
 
 /**
@@ -7,7 +8,7 @@ import lombok.Data;
  * @since 2018/5/10
  */
 @Data
-public class Item {
+public class Item extends Entity {
     private String name;
     private int price;
 }

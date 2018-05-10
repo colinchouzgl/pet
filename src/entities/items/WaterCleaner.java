@@ -13,10 +13,10 @@ import static common.Utils.safeSub;
 public class WaterCleaner extends Item {
     private int durability;
 
-    WaterCleaner() {
+    public WaterCleaner() {
     }
 
-    WaterCleaner(String name, int price) {
+    public WaterCleaner(String name, int price) {
         super.setName(name);
         super.setPrice(price);
         this.durability = Constants.MAX_VALUE;

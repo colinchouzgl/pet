@@ -10,10 +10,10 @@ import lombok.Data;
 public class BathBag extends Item {
     private int moodEffect;
 
-    BathBag() {
+    public BathBag() {
     }
 
-    BathBag(String name, int price, int moodEffect) {
+    public BathBag(String name, int price, int moodEffect) {
         super.setName(name);
         super.setPrice(price);
         this.moodEffect = moodEffect;

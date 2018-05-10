@@ -1,0 +1,28 @@
+{
+  "foods" : [ {
+    "id" : 1,
+    "name" : "MAOLIANG1",
+    "price" : 299,
+    "hungerEffect" : 3,
+    "sickChance" : 20,
+    "sickEffect" : 1
+  }, {
+    "id" : 1,
+    "name" : "MAOLIANG1",
+    "price" : 299,
+    "hungerEffect" : 3,
+    "sickChance" : 20,
+    "sickEffect" : 1
+  }, {
+    "id" : 1,
+    "name" : "MAOLIANG1",
+    "price" : 299,
+    "hungerEffect" : 3,
+    "sickChance" : 20,
+    "sickEffect" : 1
+  } ],
+  "id_bowl" : 0,
+  "id_cleaner" : 0,
+  "id_feeder" : 0,
+  "id_food" : 3
+}

@@ -1,20 +1,48 @@
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import common.Cache;
+import common.Constants;
+import common.Utils;
+import entities.items.Food;
+import net.sf.json.JSONObject;
+
+import java.util.*;
 
 /**
  * @author Zhou Guanliang
  * @since 2018/5/10
  */
 public class Test {
-    private static ExecutorService pool= Executors.newFixedThreadPool(10);
+    public static void main(String[] args) throws Exception {
+        manualInit();
+        display();
+    }
 
-    public static void start(){
-        pool.submit(()->{
-           while(true){
-               Thread.sleep(2000);
-               Game.pet.fallPiece();
-               System.out.println(Game.pet.toString());
-           }
-        });
+    public static void init() {
+        Utils.init("resources/test.txt");
+    }
+
+    public static void manualInit(){
+        Utils.initAll(manualConfig());
+    }
+
+    public static JSONObject manualConfig(){
+        JSONObject jsonObject = new JSONObject();
+        List<Food> foods = new ArrayList<>();
+        foods.add(new Food(1, "MAOLIANG1", 299, 3, 20, 1));
+        foods.add(new Food(1, "MAOLIANG1", 299, 3, 20, 1));
+        foods.add(new Food(1, "MAOLIANG1", 299, 3, 20, 1));
+        jsonObject.put(Constants.KEY_FOODS, foods);
+        jsonObject.put(Constants.TABLE_ID_FOOD, 3);
+        return jsonObject;
+    }
+
+    public static void display() throws Exception {
+        Map<String, Object> map = Cache.getData();
+        SortedMap<String, Object> sortedMap = new TreeMap<>();
+        map.forEach(sortedMap::put);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        String s = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(sortedMap);
+        System.out.println(s);
     }
 }

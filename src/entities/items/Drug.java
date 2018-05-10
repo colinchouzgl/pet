@@ -11,10 +11,10 @@ public class Drug extends Item {
     private int healthEffect;
     private int moodEffect;
 
-    Drug() {
+    public Drug() {
     }
 
-    Drug(String name, int price, int healthEffect, int moodEffect) {
+    public Drug(String name, int price, int healthEffect, int moodEffect) {
         super.setName(name);
         super.setPrice(price);
         this.healthEffect = healthEffect;

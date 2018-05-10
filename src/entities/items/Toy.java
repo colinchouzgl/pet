@@ -9,12 +9,11 @@ import lombok.Data;
 @Data
 public class Toy extends Item {
     private int moodEffect;
-    private
 
-    Toy() {
+    public Toy() {
     }
 
-    Toy(String name, int price, int moodEffect) {
+    public Toy(String name, int price, int moodEffect) {
         super.setName(name);
         super.setPrice(price);
         this.moodEffect = moodEffect;

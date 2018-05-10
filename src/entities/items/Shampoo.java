@@ -10,10 +10,10 @@ import lombok.Data;
 public class Shampoo extends Item {
     private int cleanlinessEffect;
 
-    Shampoo() {
+    public Shampoo() {
     }
 
-    Shampoo(String name, int price, int cleanlinessEffect) {
+    public Shampoo(String name, int price, int cleanlinessEffect) {
         super.setName(name);
         super.setPrice(price);
         this.cleanlinessEffect = cleanlinessEffect;

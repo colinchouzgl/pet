@@ -12,10 +12,10 @@ public class House extends Item {
     private int sickChance;
     private int sickEffect;
 
-    House() {
+    public House() {
     }
 
-    House(String name, int price, int energyEffect, int sickChance, int sickEffect) {
+    public House(String name, int price, int energyEffect, int sickChance, int sickEffect) {
         super.setName(name);
         super.setPrice(price);
         this.energyEffect = energyEffect;

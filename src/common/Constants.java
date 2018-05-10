@@ -22,4 +22,12 @@ public class Constants {
 
     public static final int ENTERTAIN_ENERGY_EFFECT = 1;
     public static final int PLAY_ENERGY_EFFECT = 2;
+
+    public final static String KEY_FOODS = "foods";
+    public final static String KEY_BOWLS = "bowls";
+
+    public final static String TABLE_ID_FOOD = "id_food";
+    public final static String TABLE_ID_BOWL = "id_bowl";
+    public final static String TABLE_ID_AUTO_FEEDER = "id_feeder";
+    public final static String TABLE_ID_WATER_CLEANER = "id_cleaner";
 }
