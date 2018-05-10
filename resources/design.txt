@@ -1,0 +1,61 @@
+Pet-Design
+Pet(name, hunger, thirst, cleanliness, energy, mood, health, liking, wetness)
+
+Action:
+Feed-food
+Feed-water
+[Eat](into Eating)
+[Drink](into Drinking)
+Feed-snack(into Eating-snack)
+Clean(into Bathing)
+Blow-dry(into Drying)
+[Sleep](into Sleeping)
+[Entertain](into Entertaining)
+Communicate(into Communicating, unlock by liking)
+Play(into Playing)
+Cure(into Curing)
+Go-to-hospital(full health, low mood)
+Wash-food-bowl
+Wash-water-bowl
+
+Item:
+Food
+Food-bowl([dirty])
+Auto-food-feeder(auto feed)
+Water-bowl([dirty])
+Auto-water-feeder(auto feed)
+Water-cleaner(sick probability)
+Net-bag(mood while bathing)
+Shampoo
+Dryer(mood while blow-dry)
+House
+Placed-toy
+Toy
+Drug
+
+State:
+-----------------
+Global:
+Normal(-hunger, -thirst, -cleanliness, -energy, ±mood, -wetness)
+Happy(+liking)
+Sad(-liking)
+Hungry(-mood)
+Extreme-Hungry(-mood, -health)
+Thirsty(-mood)
+Extreme-Thirsty(-mood, -health)
+Wet([-health])
+Sick(-mood)
+Dieing(-mood)
+Dead(0 health, game over)
+-----------------
+Period:
+Eating(+hunger with food, [-health])
+Drinking(+thirst with water, [-health])
+Eating-snack(+hunger, +mood)
+Bathing(+cleanliness(with shampoo), -mood, full wetness)
+Drying(-wetness, -mood)
+Sleeping(+energy, [-health])
+Entertaining(+mood, -energy)
+Communicating(+mood)
+Playing(+mood with toy, -energy)
+Curing(+health, -mood)
