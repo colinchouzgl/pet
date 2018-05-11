@@ -21,11 +21,14 @@ public class Constants {
     public static final int ENTERTAIN_ENERGY_EFFECT = 1;
     public static final int PLAY_ENERGY_EFFECT = 2;
     public static final int FOOD_FEED_TIMES_PER_BAG = 10;
+    public static final int FOOD_BOWL_MAX_STOCK = 3;
+    public static final int EAT_FOOD_PERIOD = 5;
 
     public final static String KEY_PET = "pet";
     public final static String KEY_MONEY = "money";
-    public final static String KEY_FOOD_BOWL_EMPTY = "food_bowl_empty";
-    public final static String KEY_WATER_BOWL_EMPTY = "water_bowl_empty";
+    public final static String KEY_FOOD_BOWL_STOCK = "food_bowl_stock";
+    public final static String KEY_FOOD_IN_BOWL = "food_in_bowl";
+    public final static String KEY_WATER_BOWL_STOCK = "water_bowl_stock";
 
     public final static String KEY_FOOD_TEMPLATES = "food_templates";
     public final static String KEY_BOWL_TEMPLATES = "bowl_templates";

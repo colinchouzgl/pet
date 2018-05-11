@@ -3,6 +3,7 @@ package dao;
 import common.Cache;
 import common.Constants;
 import entities.Pet;
+import entities.templates.FoodTemplate;
 
 /**
  * @author Zhou Guanliang
@@ -26,12 +27,20 @@ public class GlobalDAO {
         Cache.put(Constants.KEY_MONEY, money);
     }
 
-    public static boolean getFoodBowlEmpty() {
-        Boolean empty = Cache.get(Constants.KEY_FOOD_BOWL_EMPTY);
-        return empty == null ? true : empty;
+    public static int getFoodBowlStock() {
+        Integer stock = Cache.get(Constants.KEY_FOOD_BOWL_STOCK);
+        return stock == null ? 0 : stock;
     }
 
-    public static void updateFoodBowlEmpty(boolean empty) {
-        Cache.put(Constants.KEY_FOOD_BOWL_EMPTY, empty);
+    public static void updateFoodBowlStock(int stock) {
+        Cache.put(Constants.KEY_FOOD_BOWL_STOCK, stock);
+    }
+
+    public static FoodTemplate getFoodInBowl() {
+        Integer foodId = Cache.get(Constants.KEY_FOOD_IN_BOWL);
+        if (foodId == null) {
+            return null;
+        }
+        return FoodDAO.getFoodTemplateByFoodId(foodId);
     }
 }

@@ -2,6 +2,7 @@ package entities;
 
 import common.Constants;
 import common.Utils;
+import enums.PetActionState;
 import lombok.Data;
 
 import static common.Utils.safeAdd;
@@ -24,6 +25,20 @@ public class Pet {
     private int liking;
     private int health;
 
+    private PetActionState actionState;
+    private int eatingCountDown;
+    private int drinkingCountDown;
+    private int eatingSnackCountDown;
+    private int bathingCountDown;
+    private int dryingCountDown;
+    private int sleepingCountDown;
+    private int entertainingCountDown;
+    private int communicatingCountDown;
+    private int playingCountDown;
+    private int curingCountDown;
+    private int inHospitalCountDown;
+
+
     Pet() {
     }
 
@@ -37,6 +52,18 @@ public class Pet {
         mood = Constants.STABLE_MOOD;
         liking = Constants.MIN_VALUE;
         health = Constants.MAX_VALUE;
+        actionState = PetActionState.NONE;
+        eatingCountDown=0;
+        drinkingCountDown=0;
+        eatingSnackCountDown=0;
+        bathingCountDown=0;
+        dryingCountDown=0;
+        sleepingCountDown=0;
+        entertainingCountDown=0;
+        communicatingCountDown=0;
+        playingCountDown=0;
+        curingCountDown=0;
+        inHospitalCountDown=0;
     }
 
     /**

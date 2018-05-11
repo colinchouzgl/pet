@@ -39,8 +39,8 @@ public class PlayerAction {
 
     public static Response feedFood(int foodId) {
         Map<String, Object> data = new HashMap<>();
-        if (!GlobalDAO.getFoodBowlEmpty()) {
-            data.put("done", false);
+        if (GlobalDAO.getFoodBowlStock() <= 0) {
+            data.put("hasRest", true);
             return Response.succeed(data);
         }
 
@@ -49,7 +49,7 @@ public class PlayerAction {
             return Response.fail(ResponseCode.DATA_EXCEPTION);
         }
 
-        GlobalDAO.updateFoodBowlEmpty(false);
+        GlobalDAO.updateFoodBowlStock(Constants.FOOD_BOWL_MAX_STOCK);
         if (food.getRestTimes() > 1) {
             food.setRestTimes(food.getRestTimes() - 1);
         } else if (food.getRestTimes() == 1) {
@@ -63,7 +63,7 @@ public class PlayerAction {
             return Response.fail(ResponseCode.FOOD_NOT_ENOUGH);
         }
         FoodDAO.updateFood(food);
-        data.put("done", true);
+        data.put("hasRest", false);
         return Response.succeed(data);
     }
 }
