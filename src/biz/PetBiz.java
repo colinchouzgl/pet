@@ -10,7 +10,7 @@ import enums.ResponseCode;
  * @author Zhou Guanliang
  * @since 2018/5/11
  */
-public class GlobalBiz {
+public class PetBiz {
     public static Response startToEat() {
         Pet pet = GlobalDAO.getPet();
         if (pet == null) {

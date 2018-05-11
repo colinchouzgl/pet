@@ -12,6 +12,7 @@ public enum ResponseCode {
 
     //1-9999 System
     DATA_EXCEPTION(1, "Data exception"),
+    DOING_SOMETHING_ELSE(2, "Is doing something else"),
 
     /**
      * 1001-5000 Player Action
