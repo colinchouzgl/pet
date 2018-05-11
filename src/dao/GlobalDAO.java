@@ -37,7 +37,7 @@ public class GlobalDAO {
     }
 
     public static FoodTemplate getFoodInBowl() {
-        Integer foodId = Cache.get(Constants.KEY_FOOD_IN_BOWL);
+        Integer foodId = Cache.get(Constants.KEY_FOOD_ID_IN_BOWL);
         if (foodId == null) {
             return null;
         }

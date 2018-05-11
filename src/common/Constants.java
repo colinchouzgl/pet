@@ -27,7 +27,7 @@ public class Constants {
     public final static String KEY_PET = "pet";
     public final static String KEY_MONEY = "money";
     public final static String KEY_FOOD_BOWL_STOCK = "food_bowl_stock";
-    public final static String KEY_FOOD_IN_BOWL = "food_in_bowl";
+    public final static String KEY_FOOD_ID_IN_BOWL = "food_id_in_bowl";
     public final static String KEY_WATER_BOWL_STOCK = "water_bowl_stock";
 
     public final static String KEY_FOOD_TEMPLATES = "food_templates";

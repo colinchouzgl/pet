@@ -30,6 +30,8 @@ public class Utils {
     public static void initAll(JSONObject json) {
         initField(json, Constants.KEY_PET, Pet.class);
         initField(json, Constants.KEY_MONEY, Integer.class);
+        initField(json, Constants.KEY_FOOD_BOWL_STOCK, Integer.class);
+        initField(json, Constants.KEY_FOOD_ID_IN_BOWL, Integer.class);
 
         initListField(json, Constants.KEY_FOODS, Food.class);
         initListField(json, Constants.KEY_BOWLS, Bowl.class);

@@ -2,6 +2,7 @@ package entities.items;
 
 import common.Constants;
 import enums.DirtyLevel;
+import lombok.Data;
 
 import static common.Utils.safeAdd;
 
@@ -9,6 +10,7 @@ import static common.Utils.safeAdd;
  * @author Zhou Guanliang
  * @since 2018/5/10
  */
+@Data
 public class Bowl extends Item {
     private int dirty;
 
@@ -26,7 +28,7 @@ public class Bowl extends Item {
         dirty = safeAdd(dirty, 1);
     }
 
-    public DirtyLevel getDirtyLevel() {
+    public DirtyLevel calDirtyLevel() {
         if (dirty < DirtyLevel.BIT_DIRTY.getFigure()) {
             return DirtyLevel.CLEAN;
         }

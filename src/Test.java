@@ -2,7 +2,9 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import common.Cache;
 import common.Constants;
 import common.Utils;
+import entities.Pet;
 import entities.templates.FoodTemplate;
+import enums.PetActionState;
 import net.sf.json.JSONObject;
 
 import java.util.*;
@@ -28,11 +30,9 @@ public class Test {
 
     public static JSONObject manualConfig(){
         JSONObject jsonObject = new JSONObject();
-        List<FoodTemplate> foodTemplates = new ArrayList<>();
-        foodTemplates.add(new FoodTemplate(1, "MAOLIANG1", 299, 3, 20, 1));
-        foodTemplates.add(new FoodTemplate(1, "MAOLIANG1", 299, 3, 20, 1));
-        foodTemplates.add(new FoodTemplate(1, "MAOLIANG1", 299, 3, 20, 1));
-        jsonObject.put(Constants.KEY_FOODS, foodTemplates);
+        Pet pet=new Pet();
+        pet.setActionState(PetActionState.BATHING);
+        jsonObject.put(Constants.KEY_PET, pet);
         return jsonObject;
     }
 

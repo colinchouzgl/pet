@@ -39,10 +39,10 @@ public class Pet {
     private int inHospitalCountDown;
 
 
-    Pet() {
+    public Pet() {
     }
 
-    Pet(String name) {
+    public Pet(String name) {
         this.name = name;
         hunger = Constants.MAX_VALUE;
         thirst = Constants.MAX_VALUE;
@@ -70,38 +70,38 @@ public class Pet {
      * 全局碎片动作
      */
     public void globalPiece() {
-        if (isDead()) {
+        if (checkIsDead()) {
             return;
         }
-        if (isHappy()) {
+        if (checkIsHappy()) {
             liking = safeAdd(liking, 1);
         }
-        if (isSad()) {
+        if (checkIsSad()) {
             liking = safeSub(liking, 1);
         }
-        if (isHungry()) {
+        if (checkIsHungry()) {
             mood = safeSub(mood, 1);
         }
-        if (isExtremeHungry()) {
+        if (checkIsExtremeHungry()) {
             mood = safeSub(mood, 2);
             health = safeSub(health, 1);
         }
-        if (isThirsty()) {
+        if (checkIsThirsty()) {
             mood = safeSub(mood, 1);
         }
-        if (isExtremeThirsty()) {
+        if (checkIsExtremeThirsty()) {
             mood = safeSub(mood, 2);
             health = safeSub(health, 1);
         }
-        if (isWet()) {
+        if (checkIsWet()) {
             if (Utils.tossCoin(Constants.SICK_CHANCE_WHILE_WET)) {
                 health = safeSub(health, 1);
             }
         }
-        if (isSick()) {
+        if (checkIsSick()) {
             mood = safeSub(mood, 1);
         }
-        if (isDieing()) {
+        if (checkIsDieing()) {
             mood = safeSub(mood, 2);
         }
 
@@ -201,43 +201,43 @@ public class Pet {
         mood = safeSub(mood, moodEffect);
     }
 
-    public boolean isHappy() {
+    public boolean checkIsHappy() {
         return mood >= Constants.HAPPY_MOOD;
     }
 
-    public boolean isSad() {
+    public boolean checkIsSad() {
         return mood < Constants.SAD_MOOD;
     }
 
-    public boolean isHungry() {
+    public boolean checkIsHungry() {
         return hunger >= Constants.EXTREME_HUNGRY_HUNGER && hunger < Constants.HUNGRY_HUNGER;
     }
 
-    public boolean isExtremeHungry() {
+    public boolean checkIsExtremeHungry() {
         return hunger < Constants.EXTREME_HUNGRY_HUNGER;
     }
 
-    public boolean isThirsty() {
+    public boolean checkIsThirsty() {
         return thirst >= Constants.EXTREME_THIRSTY_THIRST && thirst < Constants.THIRSTY_THIRST;
     }
 
-    public boolean isExtremeThirsty() {
+    public boolean checkIsExtremeThirsty() {
         return thirst < Constants.EXTREME_THIRSTY_THIRST;
     }
 
-    public boolean isWet() {
+    public boolean checkIsWet() {
         return wetness > 0;
     }
 
-    public boolean isSick() {
+    public boolean checkIsSick() {
         return health >= Constants.DIEING_HEALTH && health < Constants.SICK_HEALTH;
     }
 
-    public boolean isDieing() {
+    public boolean checkIsDieing() {
         return health < Constants.DIEING_HEALTH;
     }
 
-    public boolean isDead() {
+    public boolean checkIsDead() {
         return health <= 0;
     }
 }

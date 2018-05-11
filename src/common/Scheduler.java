@@ -18,7 +18,7 @@ public class Scheduler {
         pool.submit(() -> {
             while (true) {
                 Pet pet = GlobalDAO.getPet();
-                if (pet == null || pet.isDead()) {
+                if (pet == null || pet.checkIsDead()) {
                     return;
                 }
                 try {

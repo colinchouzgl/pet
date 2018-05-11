@@ -21,5 +21,41 @@
     "sickChance" : 20,
     "sickEffect" : 1
   } ],
-  "money" : 100
+  "foods" : [ {
+    "id" : 1,
+    "templateId" : 1,
+    "amount" : 3,
+    "restTimes" : 2
+  }, {
+    "id" : 2,
+    "templateId" : 3,
+    "amount" : 1,
+    "restTimes" : 3
+  } ],
+  "pet" : {
+    "name" : "Java",
+    "hunger" : 95,
+    "thirst" : 92,
+    "cleanliness" : 99,
+    "wetness" : 0,
+    "energy" : 88,
+    "mood" : 56,
+    "liking" : 20,
+    "health" : 100,
+    "actionState" : "BATHING",
+    "eatingCountDown" : 0,
+    "drinkingCountDown" : 0,
+    "eatingSnackCountDown" : 0,
+    "bathingCountDown" : 0,
+    "dryingCountDown" : 0,
+    "sleepingCountDown" : 0,
+    "entertainingCountDown" : 0,
+    "communicatingCountDown" : 0,
+    "playingCountDown" : 0,
+    "curingCountDown" : 0,
+    "inHospitalCountDown" : 0
+  },
+  "money" : 500,
+  "food_bowl_stock" : 0,
+  "food_id_in_bowl" : 1
 }
